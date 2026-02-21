@@ -1,7 +1,7 @@
 {
   "name": "@batpb/genart",
   "version": "2.0.0-rc.3-alpha.2",
-  "description": "A TypeScript compatible library built with p5.js for creating responsive, generative, algorithmic art projects.",
+  "description": "A TypeScript library built with p5.js for creating responsive, generative, algorithmic art projects.",
   "license": "MIT",
   "type": "module",
   "types": "./_dist/index.d.cts",
@@ -27,26 +27,16 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@https://github.com/brittni-and-the-polar-bear/genart.git"
+    "url": "git@https://github.com/blwatkins/genart.git"
   },
   "bugs": {
-    "url": "https://github.com/brittni-and-the-polar-bear/genart/issues"
+    "url": "https://github.com/blwatkins/genart/issues"
   },
-  "homepage": "https://brittni-and-the-polar-bear.github.io/genart/",
+  "homepage": "https://blwatkins.github.io/genart/",
   "author": {
-    "name": "brittni and the polar bear",
-    "url": "https://brittni-and-the-polar-bear.github.io/"
+    "name": "brittni watkins",
+    "url": "https://blwatkins.github.io/"
   },
-  "contributors": [
-    {
-      "name": "brittni watkins",
-      "url": "https://blwatkins.github.io/"
-    },
-    {
-      "name": "azurepolarbear",
-      "url": "https://azurepolarbear.github.io/"
-    }
-  ],
   "keywords": [
     "algorithmic art",
     "code art",
@@ -54,7 +44,6 @@
     "generative art",
     "p5",
     "p5.js",
-    "p5-js",
     "p5.js library",
     "typescript"
   ],
