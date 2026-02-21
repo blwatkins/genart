@@ -62,9 +62,11 @@
   "dependencies": {
     "@types/nearest-color": "^0.4.1",
     "@types/p5": "^1.7.7",
-    "color-name-list": "^14.29.0",
     "nearest-color": "^0.4.4",
     "p5": "^1.11.11"
+  },
+  "peerDependencies": {
+    "color-name-list": "^14.29.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
