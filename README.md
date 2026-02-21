@@ -4,7 +4,7 @@ Copyright (C) 2022-2025 brittni and the polar bear LLC.
 
 A
 [TypeScript](https://www.typescriptlang.org/)
-compatible library built with
+library built with
 [p5.js](https://p5js.org/)
 for creating responsive, generative, algorithmic art projects.
 
