@@ -7,9 +7,9 @@ This is a TypeScript-compatible library for creating algorithmic generative art 
 ## Working Effectively
 
 ### Initial Setup and Dependencies
-1. Use Node.js v24.11.1 (check `.node-version` file for exact version)
-   - Install via nvm: `nvm install 24.11.1 && nvm use 24.11.1`
-   - Verify: `node --version` should show `v24.11.1`
+1. Use Node.js v24.13.1 (check `.node-version` file for exact version)
+   - Install via nvm: `nvm install 24.13.1 && nvm use 24.13.1`
+   - Verify: `node --version` should show `v24.13.1`
 
 2. **Install dependencies**: `npm install`
    - The project has TypeScript, build, documentation, and linting dependencies
@@ -279,7 +279,7 @@ This is a TypeScript-compatible library for creating algorithmic generative art 
 ├── typedoc/                      # TypeDoc styling files
 │   └── style.css                 # Custom TypeDoc styling
 ├── .gitignore                    # Git ignore rules (includes build outputs, coverage, and Jekyll files)
-├── .node-version                 # Node.js version specification (v24.11.1)
+├── .node-version                 # Node.js version specification (v24.13.1)
 ├── eslint.config.js.mjs          # ESLint configuration for JavaScript files
 ├── eslint.config.ts.mjs          # ESLint configuration for TypeScript files
 ├── LICENSE                       # MIT License
@@ -310,7 +310,7 @@ The project includes a Jekyll-based documentation site in the `docs/` directory:
 ## Package Information
 - **Name**: @batpb/genart
 - **Current Version**: 2.0.0-rc.3-alpha.2
-- **Description**: A TypeScript compatible library built with p5.js for creating responsive, generative, algorithmic art projects
+- **Description**: A TypeScript library built with p5.js for creating responsive, generative, algorithmic art projects
 - **License**: MIT
 - **Homepage**: https://brittni-and-the-polar-bear.github.io/genart/
 - **Repository**: https://github.com/brittni-and-the-polar-bear/genart
@@ -360,7 +360,7 @@ The project includes a Jekyll-based documentation site in the `docs/` directory:
 - **typescript-eslint** - TypeScript-specific ESLint rules
 
 ### Configuration Files
-- `tsconfig.json` - TypeScript compiler configuration with strict settings
+- `tsconfig.json` - TypeScript compiler configuration with strict settings (target: ES2023)
 - `tsdown.config.ts` - Build configuration for multiple output formats
 - `typedoc.json` - Documentation generation settings with custom styling (includes all modules: color, discriminator, map, palette, palette_color, sketch, string)
 - `eslint.config.js.mjs` - ESLint rules for JavaScript configuration files
@@ -448,13 +448,13 @@ The following npm scripts are available:
 ## Development Guidelines
 
 ### Node.js Version
-- Use Node.js v24.11.1 as specified in `.node-version`
+- Use Node.js v24.13.1 as specified in `.node-version`
 - Check version before working: `node --version`
 
 ### Working with the Project
 This project now has comprehensive TypeScript development infrastructure:
 - Main development happens on the main branch
-- TypeScript compilation configured with strict settings
+- TypeScript compilation configured with strict settings (target: ES2023)
 - ESLint setup for both JavaScript config files and TypeScript source (supports imports for documentation links)
 - Build process generates multiple formats (ESM, CJS, IIFE) with type definitions
 - Documentation generation creates comprehensive API docs for all modules
@@ -473,7 +473,7 @@ This project now has comprehensive TypeScript development infrastructure:
 - Release documentation organized in `docs/releases/`
 
 ### Build and Development Tools
-- **TypeScript**: Configured with strict settings, outputs to `_compiled/`
+- **TypeScript**: Configured with strict settings (target: ES2023), outputs to `_compiled/`
 - **tsdown**: Build tool that creates multiple output formats in `_dist/`
 - **typedoc**: Documentation generator with coverage plugin, outputs to `_doc/`
 - **ESLint**: Separate configurations for JS and TS files with comprehensive rules
@@ -528,7 +528,7 @@ Include other relevant tags (such as `@template`, `@type`) after the above, as a
 
 **Setup new environment:**
 ```bash
-nvm use 24.11.1        # Use correct Node.js version
+nvm use 24.13.1        # Use correct Node.js version
 npm install            # Install all development dependencies
 ```
 
@@ -544,7 +544,7 @@ npm run test:coverage  # Run tests with coverage reporting
 
 **Basic validation:**
 ```bash
-node --version         # Verify Node.js version (should be v24.11.1)
+node --version         # Verify Node.js version (should be v24.13.1)
 npm run build          # Should build successfully
 npm run docs           # Should generate docs
 npm test               # Should run vitest tests and pass
