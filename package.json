@@ -65,6 +65,9 @@
     "nearest-color": "^0.4.4",
     "p5": "^1.11.11"
   },
+  "peerDependencies": {
+    "color-name-list": "^14.29.0"
+  },
   "peerDependenciesMeta": {
     "color-name-list": {
       "optional": true
