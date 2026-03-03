@@ -117,9 +117,20 @@ This is a TypeScript-compatible library for creating algorithmic generative art 
 │   │       └── pride-palettes.md # Pride palettes display page
 │   ├── doc/                      # TypeDoc generated documentation
 │   ├── releases/                 # Release documentation structure
-│   │   └── v2.x/                 # v2.0.0 release documentation
+│   │   ├── v0.x/                 # v0.x release documentation
+│   │   │   └── v0.5.x/           # v0.5.x release documentation
+│   │   │       └── v0.5.0/       # v0.5.0 docs
+│   │   ├── v1.x/                 # v1.x release documentation
+│   │   │   ├── v1.0.x/           # v1.0.x release documentation
+│   │   │   │   ├── v1.0.0/       # v1.0.0 docs
+│   │   │   │   └── v1.0.1/       # v1.0.1 docs
+│   │   │   └── v1.1.x/           # v1.1.x release documentation
+│   │   │       └── v1.1.0/       # v1.1.0 docs
+│   │   └── v2.x/                 # v2.x release documentation
 │   │       └── v2.0.x/           # v2.0.x release documentation
 │   │           └── v2.0.0-rc.x/  # v2.0.0-rc.x release documentation
+│   │               ├── v2.0.0-rc.1/ # v2.0.0-rc.1 docs
+│   │               ├── v2.0.0-rc.2/ # v2.0.0-rc.2 docs
 │   │               └── v2.0.0-rc.3-alpha.x/ # v2.0.0-rc.3-alpha.x documentation
 │   │                   ├── v2.0.0-rc.3-alpha.0/ # v2.0.0-rc.3-alpha.0 docs
 │   │                   ├── v2.0.0-rc.3-alpha.1/ # v2.0.0-rc.3-alpha.1 docs
@@ -295,7 +306,7 @@ This is a TypeScript-compatible library for creating algorithmic generative art 
 
 ### Documentation Site
 The project includes a Jekyll-based documentation site in the `docs/` directory:
-- Hosted at: https://brittni-and-the-polar-bear.github.io/genart/
+- Hosted at: https://blwatkins.github.io/genart/
 - Uses Jekyll with custom configuration
 - Main content in `index.md` with links to generated docs and releases
 - `doc/` contains TypeDoc-generated API documentation
@@ -310,16 +321,14 @@ The project includes a Jekyll-based documentation site in the `docs/` directory:
 ## Package Information
 - **Name**: @batpb/genart
 - **Current Version**: 2.0.0-rc.3-alpha.2
-- **Description**: A TypeScript compatible library built with p5.js for creating responsive, generative, algorithmic art projects
+- **Description**: A TypeScript library built with p5.js for creating responsive, generative, algorithmic art projects
 - **License**: MIT
-- **Homepage**: https://brittni-and-the-polar-bear.github.io/genart/
-- **Repository**: https://github.com/brittni-and-the-polar-bear/genart
-- **Keywords**: algorithmic art, code art, genart, generative art, p5, p5.js, p5-js, p5.js library, typescript
+- **Homepage**: https://blwatkins.github.io/genart/
+- **Repository**: https://github.com/blwatkins/genart
+- **Keywords**: algorithmic art, code art, genart, generative art, p5, p5js, p5.js, p5.js library, typescript
 
-### Contributors
-- **brittni and the polar bear** (primary author)
+### Author
 - brittni watkins (https://blwatkins.github.io/)
-- azurepolarbear (https://azurepolarbear.github.io/)
 
 ## Dependencies and Development Tools
 
