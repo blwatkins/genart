@@ -26,6 +26,11 @@ export default defineConfig({
         environment: 'jsdom',
         include: ['tests/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
         exclude: ['node_modules', '_dist', '_compiled', '_doc', 'docs'],
+        server: {
+            deps: {
+                inline: ['p5']
+            }
+        },
         coverage: {
             provider: 'v8',
             reporter: ['text', 'lcov', 'json', 'json-summary', 'clover', 'html'],
