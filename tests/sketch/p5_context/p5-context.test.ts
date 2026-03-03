@@ -66,10 +66,8 @@ describe('P5Context', (): void => {
             const expectedHeight: number = 250;
 
             const testInstance = new p5((p: p5): void => {
-                p.setup = (): void => {
-                    p.createCanvas(expectedWidth, expectedHeight);
-                    p.noLoop();
-                };
+                p.createCanvas(expectedWidth, expectedHeight);
+                p.noLoop();
             });
 
             const result: boolean = P5Context.init(testInstance);
@@ -86,10 +84,8 @@ describe('P5Context', (): void => {
             const expectedHeight: number = 500;
 
             const testInstance = new p5((p: p5): void => {
-                p.setup = (): void => {
-                    p.createCanvas(expectedWidth, expectedHeight);
-                    p.noLoop();
-                };
+                p.createCanvas(expectedWidth, expectedHeight);
+                p.noLoop();
             });
 
             const result: boolean = P5Context.init(testInstance, true);
@@ -106,10 +102,8 @@ describe('P5Context', (): void => {
             const expectedHeight: number = 500;
 
             const testInstance = new p5((p: p5): void => {
-                p.setup = (): void => {
-                    p.createCanvas(expectedWidth, expectedHeight);
-                    p.noLoop();
-                };
+                p.createCanvas(expectedWidth, expectedHeight);
+                p.noLoop();
             });
 
             const result: boolean = P5Context.init(testInstance, false);
@@ -128,10 +122,8 @@ describe('P5Context', (): void => {
             const expectedHeight: number = 720;
 
             const testInstance = new p5((p: p5): void => {
-                p.setup = (): void => {
-                    p.createCanvas(expectedWidth, expectedHeight);
-                    p.noLoop();
-                };
+                p.createCanvas(expectedWidth, expectedHeight);
+                p.noLoop();
             });
 
             const result: boolean = P5Context.init(testInstance, true);
@@ -153,10 +145,8 @@ describe('P5Context', (): void => {
             const height: number = 720;
 
             const testInstance = new p5((p: p5): void => {
-                p.setup = (): void => {
-                    p.createCanvas(width, height);
-                    p.noLoop();
-                };
+                p.createCanvas(width, height);
+                p.noLoop();
             });
 
             const result: boolean = P5Context.init(testInstance, false);
@@ -195,10 +185,8 @@ describe('P5Context', (): void => {
             let expectedHeight: number = 2160;
 
             const testInstance = new p5((p: p5): void => {
-                p.setup = (): void => {
-                    p.createCanvas(expectedWidth, expectedHeight);
-                    p.noLoop();
-                };
+                p.createCanvas(expectedWidth, expectedHeight);
+                p.noLoop();
             });
 
             P5Context.init(testInstance, true);
@@ -234,10 +222,8 @@ describe('P5Context', (): void => {
             const height: number = 2160;
 
             const testInstance = new p5((p: p5): void => {
-                p.setup = (): void => {
-                    p.createCanvas(width, height);
-                    p.noLoop();
-                };
+                p.createCanvas(width, height);
+                p.noLoop();
             });
 
             P5Context.init(testInstance, false);

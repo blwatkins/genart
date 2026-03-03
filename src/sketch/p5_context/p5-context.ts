@@ -54,11 +54,9 @@ export class P5Context {
     public static get instance(): p5 {
         if (!P5Context.#p5Instance) {
             P5Context.#p5Instance = new p5((p: p5): void => {
-                p.setup = (): void => {
-                    p.createCanvas(0, 0);
-                    p.noLoop();
-                    p.noCanvas();
-                };
+                p.createCanvas(0, 0);
+                p.noLoop();
+                p.noCanvas();
             });
         }
 
