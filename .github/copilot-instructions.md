@@ -7,9 +7,9 @@ This is a TypeScript-compatible library for creating algorithmic generative art 
 ## Working Effectively
 
 ### Initial Setup and Dependencies
-1. Use Node.js v24.11.1 (check `.node-version` file for exact version)
-   - Install via nvm: `nvm install 24.11.1 && nvm use 24.11.1`
-   - Verify: `node --version` should show `v24.11.1`
+1. Use Node.js v24.14.0 (check `.node-version` file for exact version)
+   - Install via nvm: `nvm install 24.14.0 && nvm use 24.14.0`
+   - Verify: `node --version` should show `v24.14.0`
 
 2. **Install dependencies**: `npm install`
    - The project has TypeScript, build, documentation, and linting dependencies
@@ -290,7 +290,7 @@ This is a TypeScript-compatible library for creating algorithmic generative art 
 ├── typedoc/                      # TypeDoc styling files
 │   └── style.css                 # Custom TypeDoc styling
 ├── .gitignore                    # Git ignore rules (includes build outputs, coverage, and Jekyll files)
-├── .node-version                 # Node.js version specification (v24.11.1)
+├── .node-version                 # Node.js version specification (v24.14.0)
 ├── eslint.config.js.mjs          # ESLint configuration for JavaScript files
 ├── eslint.config.ts.mjs          # ESLint configuration for TypeScript files
 ├── LICENSE                       # MIT License
@@ -457,7 +457,7 @@ The following npm scripts are available:
 ## Development Guidelines
 
 ### Node.js Version
-- Use Node.js v24.11.1 as specified in `.node-version`
+- Use Node.js v24.14.0 as specified in `.node-version`
 - Check version before working: `node --version`
 
 ### Working with the Project
@@ -537,7 +537,7 @@ Include other relevant tags (such as `@template`, `@type`) after the above, as a
 
 **Setup new environment:**
 ```bash
-nvm use 24.11.1        # Use correct Node.js version
+nvm use 24.14.0        # Use correct Node.js version
 npm install            # Install all development dependencies
 ```
 
@@ -553,7 +553,7 @@ npm run test:coverage  # Run tests with coverage reporting
 
 **Basic validation:**
 ```bash
-node --version         # Verify Node.js version (should be v24.11.1)
+node --version         # Verify Node.js version (should be v24.14.0)
 npm run build          # Should build successfully
 npm run docs           # Should generate docs
 npm test               # Should run vitest tests and pass
