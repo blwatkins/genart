@@ -21,26 +21,51 @@
 /* This configuration is designed to lint all JavaScript files in the project. */
 
 import eslint from '@eslint/js';
-
-import es_x from 'eslint-plugin-es-x';
+import stylistic from '@stylistic/eslint-plugin';
+import esX from 'eslint-plugin-es-x';
 import node from 'eslint-plugin-n';
 import security from 'eslint-plugin-security';
+import globals from 'globals';
 
-import stylistic from '@stylistic/eslint-plugin';
+import { defineConfig, globalIgnores } from 'eslint/config';
 
-export default [
-    eslint.configs.recommended,
-    es_x.configs['flat/restrict-to-es2023'],
-    node.configs['flat/recommended'],
-    security.configs.recommended,
-    stylistic.configs['recommended'],
+export default defineConfig([
+    globalIgnores([
+        '_dist/**',
+        '_doc/**',
+        'docs/**'
+    ]),
     {
+        files: [
+            '**/*.js',
+            '**/*.mjs',
+            '**/*.cjs',
+            '**/*.jsx'
+        ],
+        plugins: {
+            'eslint': eslint,
+            'es-x': esX,
+            'n': node,
+            'security': security,
+            '@stylistic': stylistic
+        },
+        extends: [
+            'eslint/recommended',
+            'es-x/flat/restrict-to-es2023',
+            'n/flat/recommended',
+            'security/recommended',
+            '@stylistic/recommended'
+        ],
         languageOptions: {
             ecmaVersion: 2023,
-            sourceType: 'module'
+            sourceType: 'module',
+            globals: {
+                ...globals.node
+            }
         },
         rules: {
             /* @eslint/js */
+
             'array-callback-return': ['error', {
                 checkForEach: true
             }],
@@ -82,6 +107,8 @@ export default [
             'no-useless-assignment': 'error',
 
             'require-atomic-updates': 'error',
+
+            'require-await': 'error',
 
             'use-isnan': ['error', {
                 enforceForSwitchCase: true,
@@ -142,7 +169,23 @@ export default [
                 }
             ],
 
-            '@stylistic/semi': ['error', 'always']
+            '@stylistic/semi': ['error', 'always'],
+
+            /* eslint-plugin-n */
+
+            'n/no-extraneous-import': 'error',
+
+            'n/no-missing-import': 'error',
+
+            'n/no-unsupported-features/es-syntax': ['error', {
+                version: '>=20.19.0',
+                ignores: []
+            }],
+
+            'n/no-unsupported-features/node-builtins': ['error', {
+                version: '>=20.19.0',
+                ignores: []
+            }]
         }
     }
-];
+]);
