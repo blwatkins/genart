@@ -53,7 +53,7 @@
   ],
   "scripts": {
     "docs": "typedoc",
-    "lint:js": "eslint -c eslint.config.js.mjs ./eslint.config.js.mjs ./eslint.config.ts.mjs",
+    "lint:js": "eslint -c eslint.config.js.mjs .",
     "lint:ts": "eslint -c eslint.config.ts.mjs .",
     "test": "vitest run",
     "test:watch": "vitest",

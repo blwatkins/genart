@@ -31,7 +31,10 @@ import { defineConfig, globalIgnores } from 'eslint/config';
 export default defineConfig([
     globalIgnores([
         '_compiled/**',
+        '_coverage/**',
         '_dist/**',
+        'docs/doc/**',
+        'docs/releases/**/doc/**',
         '**/*.js',
         '**/*.cjs',
         '**/*.mjs',
