@@ -28,7 +28,7 @@ import { P5Context } from '../p5_context';
 
 import { ContextConfig } from './context-config';
 import { RenderType } from './render-type';
-import {StringValidator} from "../../string";
+import { StringValidator } from '../../string';
 
 /**
  * Abstract base class for managing rendering contexts in generative art sketches.
