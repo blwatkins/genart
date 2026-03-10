@@ -1,10 +1,10 @@
 # [@batpb/genart](https://www.npmjs.com/package/@batpb/genart) - algorithmic generative art library
 
-Copyright (C) 2022-2025 brittni and the polar bear LLC.
+Copyright &copy; 2022-2026 brittni and the polar bear LLC.
 
 A
 [TypeScript](https://www.typescriptlang.org/)
-compatible library built with
+library built with
 [p5.js](https://p5js.org/)
 for creating responsive, generative, algorithmic art projects.
 

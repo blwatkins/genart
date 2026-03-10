@@ -1,7 +1,7 @@
 {
   "name": "@batpb/genart",
-  "version": "2.0.0-rc.3-alpha.2-dev-20251223-001",
-  "description": "A TypeScript compatible library built with p5.js for creating responsive, generative, algorithmic art projects.",
+  "version": "2.0.0-rc.3-alpha.2",
+  "description": "A TypeScript library built with p5.js for creating responsive, generative, algorithmic art projects.",
   "license": "MIT",
   "type": "module",
   "types": "./_dist/index.d.cts",
@@ -27,34 +27,24 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@https://github.com/brittni-and-the-polar-bear/genart.git"
+    "url": "https://github.com/blwatkins/genart.git"
   },
   "bugs": {
-    "url": "https://github.com/brittni-and-the-polar-bear/genart/issues"
+    "url": "https://github.com/blwatkins/genart/issues"
   },
-  "homepage": "https://brittni-and-the-polar-bear.github.io/genart/",
+  "homepage": "https://blwatkins.github.io/genart/",
   "author": {
-    "name": "brittni and the polar bear",
-    "url": "https://brittni-and-the-polar-bear.github.io/"
+    "name": "brittni watkins",
+    "url": "https://blwatkins.github.io/"
   },
-  "contributors": [
-    {
-      "name": "brittni watkins",
-      "url": "https://blwatkins.github.io/"
-    },
-    {
-      "name": "azurepolarbear",
-      "url": "https://azurepolarbear.github.io/"
-    }
-  ],
   "keywords": [
     "algorithmic art",
     "code art",
     "genart",
     "generative art",
     "p5",
+    "p5js",
     "p5.js",
-    "p5-js",
     "p5.js library",
     "typescript"
   ],
@@ -72,28 +62,36 @@
   "dependencies": {
     "@types/nearest-color": "^0.4.1",
     "@types/p5": "^1.7.7",
-    "color-name-list": "^14.14.0",
     "nearest-color": "^0.4.4",
     "p5": "^1.11.11"
   },
+  "peerDependencies": {
+    "color-name-list": "^14.33.0"
+  },
+  "peerDependenciesMeta": {
+    "color-name-list": {
+      "optional": true
+    }
+  },
   "devDependencies": {
-    "@eslint/js": "^9.39.1",
-    "@stylistic/eslint-plugin": "^5.6.1",
-    "@vitest/coverage-v8": "^4.0.15",
+    "@eslint/js": "^10.0.1",
+    "@stylistic/eslint-plugin": "^5.9.0",
+    "@vitest/coverage-v8": "^4.0.18",
     "@vitest/ui": "^4.0.14",
-    "canvas": "^3.2.0",
-    "eslint": "^9.39.1",
-    "eslint-plugin-es-x": "^9.2.0",
-    "eslint-plugin-n": "^17.23.1",
-    "eslint-plugin-security": "^3.0.1",
-    "jsdom": "^27.3.0",
+    "canvas": "^3.2.1",
+    "color-name-list": "^14.33.0",
+    "eslint": "^10.0.2",
+    "eslint-plugin-es-x": "^9.5.0",
+    "eslint-plugin-n": "^17.24.0",
+    "eslint-plugin-security": "^4.0.0",
+    "jsdom": "^28.1.0",
     "ts-node": "^10.9.2",
-    "tsdown": "^0.17.2",
+    "tsdown": "^0.20.3",
     "tslib": "^2.8.1",
-    "typedoc": "^0.28.15",
+    "typedoc": "^0.28.17",
     "typedoc-plugin-coverage": "^4.0.2",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.49.0",
+    "typescript-eslint": "^8.56.1",
     "vitest": "^4.0.14"
   }
 }
