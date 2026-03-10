@@ -1,12 +1,38 @@
 {
   "name": "@batpb/genart",
   "version": "2.0.0-rc.3-alpha.2",
-  "description": "A TypeScript library built with p5.js for creating responsive, generative, algorithmic art projects.",
   "license": "MIT",
+  "description": "A TypeScript library built with p5.js for creating responsive, generative, algorithmic art projects.",
+  "keywords": [
+    "algorithmic art",
+    "code art",
+    "genart",
+    "generative art",
+    "p5",
+    "p5js",
+    "p5.js",
+    "p5.js library",
+    "typescript"
+  ],
+  "author": {
+    "name": "Brittni Watkins",
+    "url": "https://blwatkins.github.io/"
+  },
+  "homepage": "https://blwatkins.github.io/genart/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blwatkins/genart.git"
+  },
+  "bugs": {
+    "url": "https://github.com/blwatkins/genart/issues"
+  },
   "type": "module",
+  "engines": {
+    "node": "^20.19.0 || ^22.13.0 || >=24"
+  },
+  "main": "./_dist/index.cjs",
   "types": "./_dist/index.d.cts",
   "module": "./_dist/index.mjs",
-  "main": "./_dist/index.cjs",
   "exports": {
     ".": {
       "import": {
@@ -25,31 +51,7 @@
     "./package.json",
     "./README.md"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/blwatkins/genart.git"
-  },
-  "bugs": {
-    "url": "https://github.com/blwatkins/genart/issues"
-  },
-  "homepage": "https://blwatkins.github.io/genart/",
-  "author": {
-    "name": "brittni watkins",
-    "url": "https://blwatkins.github.io/"
-  },
-  "keywords": [
-    "algorithmic art",
-    "code art",
-    "genart",
-    "generative art",
-    "p5",
-    "p5js",
-    "p5.js",
-    "p5.js library",
-    "typescript"
-  ],
   "scripts": {
-    "build": "tsdown",
     "docs": "typedoc",
     "lint:js": "eslint -c eslint.config.js.mjs ./eslint.config.js.mjs ./eslint.config.ts.mjs",
     "lint:ts": "eslint -c eslint.config.ts.mjs ./src ./tests ./tsdown.config.ts ./vitest.config.ts",
@@ -57,7 +59,8 @@
     "test:watch": "vitest",
     "test:ui": "vitest --ui",
     "test:coverage": "vitest run --coverage",
-    "prepack": "npm run build"
+    "prepack": "npm run build",
+    "build": "tsdown"
   },
   "dependencies": {
     "@types/nearest-color": "^0.4.1",
