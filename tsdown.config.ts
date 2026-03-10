@@ -32,7 +32,6 @@ export default defineConfig({
     failOnWarn: true,
     minify: false,
     format: ['cjs', 'esm', 'iife'],
-    external: ['nearest-color', 'p5'],
     outputOptions: {
         globals: {
             'nearest-color': 'nearestColor',
