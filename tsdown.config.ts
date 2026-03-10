@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2024-2026 brittni and the polar bear LLC.
+ * Copyright (C) 2024-2026 Brittni Watkins.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"),
@@ -31,8 +31,7 @@ export default defineConfig({
     dts: true,
     failOnWarn: true,
     minify: false,
-    format: ['cjs', 'esm', 'iife'],
-    external: ['nearest-color', 'p5'],
+    format: ['esm'],
     outputOptions: {
         globals: {
             'nearest-color': 'nearestColor',

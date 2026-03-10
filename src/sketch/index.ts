@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2023-2026 brittni and the polar bear LLC.
+ * Copyright (C) 2023-2026 Brittni Watkins.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"),
@@ -19,10 +19,12 @@
  */
 
 export * from './aspect_ratio';
+export * from './canvas';
 export * from './context';
 export * from './coordinate';
 export * from './graphics';
 export * from './p5_context';
+export * from './screen';
 
 /**
  * @category Namespace
@@ -30,6 +32,13 @@ export * from './p5_context';
  * @since 2.0.0
  */
 export * as aspect_ratio from './aspect_ratio';
+
+/**
+ * @category Namespace
+ *
+ * @since 2.0.0
+ */
+export * as canvas from './canvas';
 
 /**
  * @category Namespace
@@ -58,3 +67,10 @@ export * as graphics from './graphics';
  * @since 2.0.0
  */
 export * as p5_context from './p5_context';
+
+/**
+ * @category Namespace
+ *
+ * @since 2.0.0
+ */
+export * as screen from './screen';

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2024-2026 brittni and the polar bear LLC.
+ * Copyright (C) 2024-2026 Brittni Watkins.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"),
@@ -18,12 +18,13 @@
  * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-import { AspectRatio } from '../aspect_ratio';
+import { AspectRatio, AspectRatioConfig } from '../aspect_ratio';
 
+import { Context } from './context';
 import { RenderType } from './render-type';
 
 /**
- * Configuration for a Context.
+ * Configuration for a {@link Context}.
  *
  * @since 2.0.0
  *
@@ -49,13 +50,14 @@ export interface ContextConfig {
     readonly RENDER_TYPE?: RenderType;
 
     /**
-     * The {@link AspectRatio} of the context.
+     * A representation of the aspect ratio of the context.
+     * This may be an {@link AspectRatio} object or an {@link AspectRatioConfig} object.
      *
      * @readonly
      *
      * @since 2.0.0
      */
-    readonly ASPECT_RATIO?: AspectRatio;
+    readonly ASPECT_RATIO?: AspectRatio | AspectRatioConfig;
 
     /**
      * The resolution of the context.

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2024-2026 brittni and the polar bear LLC.
+ * Copyright (C) 2024-2026 Brittni Watkins.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"),
@@ -31,6 +31,19 @@ export class StringValidator {
      */
     public constructor() {
         throw new Error('StringValidator is a static class and cannot be instantiated.');
+    }
+
+    /**
+     * Is the given value a string that is not empty?
+     *
+     * @param value - The value to check.
+     *
+     * @returns `true` if the given value is a string that is not empty, `false` otherwise.
+     *
+     * @since 2.0.0
+     */
+    public static isString(value: unknown): value is string {
+        return (typeof value === 'string') && (value.trim().length > 0);
     }
 
     /**

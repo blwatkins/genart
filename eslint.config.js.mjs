@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2024-2026 brittni and the polar bear LLC.
+ * Copyright (C) 2024-2026 Brittni Watkins.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"),
@@ -21,26 +21,46 @@
 /* This configuration is designed to lint all JavaScript files in the project. */
 
 import eslint from '@eslint/js';
-
-import es_x from 'eslint-plugin-es-x';
-import node from 'eslint-plugin-n';
-import security from 'eslint-plugin-security';
-
 import stylistic from '@stylistic/eslint-plugin';
+import esX from 'eslint-plugin-es-x';
+import globals from 'globals';
 
-export default [
-    eslint.configs.recommended,
-    es_x.configs['flat/restrict-to-es2023'],
-    node.configs['flat/recommended'],
-    security.configs.recommended,
-    stylistic.configs['recommended'],
+import { defineConfig, globalIgnores } from 'eslint/config';
+
+export default defineConfig([
+    globalIgnores([
+        '_compiled/**',
+        '_coverage/**',
+        '_dist/**',
+        'docs/doc/**',
+        'docs/releases/**/doc/**'
+    ]),
     {
+        files: [
+            '**/*.js',
+            '**/*.mjs',
+            '**/*.cjs',
+            '**/*.jsx'
+        ],
+        plugins: {
+            'es-x': esX,
+            '@stylistic': stylistic
+        },
+        extends: [
+            eslint.configs.recommended,
+            'es-x/flat/restrict-to-es2022',
+            '@stylistic/recommended'
+        ],
         languageOptions: {
-            ecmaVersion: 2023,
-            sourceType: 'module'
+            ecmaVersion: 2022,
+            sourceType: 'module',
+            globals: {
+                ...globals.node
+            }
         },
         rules: {
             /* @eslint/js */
+
             'array-callback-return': ['error', {
                 checkForEach: true
             }],
@@ -82,6 +102,8 @@ export default [
             'no-useless-assignment': 'error',
 
             'require-atomic-updates': 'error',
+
+            'require-await': 'error',
 
             'use-isnan': ['error', {
                 enforceForSwitchCase: true,
@@ -145,4 +167,4 @@ export default [
             '@stylistic/semi': ['error', 'always']
         }
     }
-];
+]);
