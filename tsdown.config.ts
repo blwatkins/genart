@@ -31,7 +31,7 @@ export default defineConfig({
     dts: true,
     failOnWarn: true,
     minify: false,
-    format: ['cjs', 'esm', 'iife'],
+    format: ['esm'],
     outputOptions: {
         globals: {
             'nearest-color': 'nearestColor',

@@ -30,18 +30,12 @@
   "engines": {
     "node": "^20.19.0 || ^22.13.0 || >=24"
   },
-  "main": "./_dist/index.cjs",
-  "types": "./_dist/index.d.cts",
   "module": "./_dist/index.mjs",
   "exports": {
     ".": {
       "import": {
         "types": "./_dist/index.d.mts",
         "default": "./_dist/index.mjs"
-      },
-      "require": {
-        "types": "./_dist/index.d.cts",
-        "default": "./_dist/index.cjs"
       }
     }
   },
