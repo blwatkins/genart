@@ -1,23 +1,21 @@
 /*
- * Copyright (C) 2025 brittni and the polar bear LLC.
+ * Copyright (C) 2025-2026 Brittni Watkins.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
+ * of this software and associated documentation files (the "Software"),
+ * to deal in the Software without restriction, including without limitation
+ * the rights to use, copy, modify, merge, publish, distribute, sublicense,
+ * and/or sell copies of the Software, and to permit persons to whom
+ * the Software is furnished to do so, subject to the following conditions:
  *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
+ * The above copyright notice and this permission notice shall be included
+ * in all copies or substantial portions of the Software.
  *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+ * INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE
+ * AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE
+ * FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
 import { describe, test, expect } from 'vitest';
@@ -40,7 +38,7 @@ describe('AspectRatio', (): void => {
                 { width: 720, height: -100, expectedWidthRatio: 1, expectedHeightRatio: 1, expectedName: '1:1' },
                 { width: 0, height: 720, expectedWidthRatio: 1, expectedHeightRatio: 1, expectedName: '1:1' },
                 { width: 720, height: 0, expectedWidthRatio: 1, expectedHeightRatio: 1, expectedName: '1:1' }
-            ])('new AspectRatio($width, $height)', ({ width, height, expectedWidthRatio, expectedHeightRatio, expectedName}: { width: number; height: number; expectedWidthRatio: number; expectedHeightRatio: number; expectedName: string; }): void => {
+            ])('new AspectRatio($width, $height)', ({ width, height, expectedWidthRatio, expectedHeightRatio, expectedName }: { width: number; height: number; expectedWidthRatio: number; expectedHeightRatio: number; expectedName: string; }): void => {
                 const aspectRatio = new AspectRatio(width, height);
                 expect(aspectRatio.WIDTH_RATIO).toBe(expectedWidthRatio);
                 expect(aspectRatio.HEIGHT_RATIO).toBe(expectedHeightRatio);
@@ -74,7 +72,7 @@ describe('AspectRatio', (): void => {
                 { width: 720, height: -100, name: undefined, expectedWidthRatio: 1, expectedHeightRatio: 1, expectedName: '1:1' },
                 { width: 0, height: 720, name: undefined, expectedWidthRatio: 1, expectedHeightRatio: 1, expectedName: '1:1' },
                 { width: 720, height: 0, name: undefined, expectedWidthRatio: 1, expectedHeightRatio: 1, expectedName: '1:1' }
-            ])('new AspectRatio($width, $height, $name)', ({ width, height, name, expectedWidthRatio, expectedHeightRatio, expectedName}: { width: number; height: number; name: string | undefined; expectedWidthRatio: number; expectedHeightRatio: number; expectedName: string; }): void => {
+            ])('new AspectRatio($width, $height, $name)', ({ width, height, name, expectedWidthRatio, expectedHeightRatio, expectedName }: { width: number; height: number; name: string | undefined; expectedWidthRatio: number; expectedHeightRatio: number; expectedName: string; }): void => {
                 const aspectRatio = new AspectRatio(width, height, name);
                 expect(aspectRatio.WIDTH_RATIO).toBe(expectedWidthRatio);
                 expect(aspectRatio.HEIGHT_RATIO).toBe(expectedHeightRatio);

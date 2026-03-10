@@ -1,19 +1,25 @@
 {
   "compilerOptions": {
     /* Language and Environment */
-    "target": "es2023",
+    "target": "es2022",
     "skipLibCheck": false,
     "skipDefaultLibCheck": false,
 
     /* Modules */
-    "module": "es2022",
-    "moduleResolution": "node",
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "rootDir": "./",
 
     /* JSON Modules */
     "resolveJsonModule": true,
-    "resolvePackageJsonExports": false,
-    "resolvePackageJsonImports": false,
+    "resolvePackageJsonExports": true,
+    "resolvePackageJsonImports": true,
+
+    /* Libraries */
+    "lib": [
+      "es2022",
+      "dom"
+    ],
 
     /* Emit */
     "outDir": "./_compiled",

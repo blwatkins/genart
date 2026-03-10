@@ -28,7 +28,7 @@
   "json": "./_doc/json",
 
   "navigationLinks": {
-    "GitHub Pages": "https://brittni-and-the-polar-bear.github.io/genart/"
+    "GitHub Pages": "https://blwatkins.github.io/genart/"
   },
 
   "navigation": {
@@ -57,5 +57,5 @@
 
   "treatWarningsAsErrors": true,
 
-  "customFooterHtml": "<br/>Copyright &copy; 2022-2025 <a href=\"https://brittni-and-the-polar-bear.github.io/\" target=\"_blank\" rel=\"noopener noreferrer\">brittni and the polar bear LLC</a>."
+  "customFooterHtml": "<br/>Copyright &copy; 2022-2026 Brittni Watkins."
 }
