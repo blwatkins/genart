@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2024-2026 brittni and the polar bear LLC.
+ * Copyright (C) 2024-2026 Brittni Watkins.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"),
@@ -20,7 +20,6 @@
 
 import { describe, test, expect, beforeAll } from 'vitest';
 
-// @ts-expect-error colornames import works despite TypeScript error as of color-name-list@13.41.1
 import { colornames } from 'color-name-list';
 
 import { ColorNames, Discriminators, PaletteColor, ALL_PALETTE_COLORS } from '../../../src';

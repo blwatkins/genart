@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2024-2026 brittni and the polar bear LLC.
+ * Copyright (C) 2024-2026 Brittni Watkins.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"),
@@ -21,34 +21,60 @@
 /* This configuration is designed to lint all TypeScript files in the project. */
 
 import eslint from '@eslint/js';
-
-import es_x from 'eslint-plugin-es-x';
-import node from 'eslint-plugin-n';
-import security from 'eslint-plugin-security';
-
 import stylistic from '@stylistic/eslint-plugin';
-
+import esX from 'eslint-plugin-es-x';
+import globals from 'globals';
 import tsEslint from 'typescript-eslint';
 
-export default tsEslint.config(
-    eslint.configs.recommended,
-    es_x.configs['flat/restrict-to-es2023'],
-    node.configs['flat/recommended'],
-    security.configs.recommended,
-    stylistic.configs['recommended'],
-    ...tsEslint.configs.recommendedTypeChecked,
-    ...tsEslint.configs.strictTypeChecked,
-    ...tsEslint.configs.stylisticTypeChecked,
+import { defineConfig, globalIgnores } from 'eslint/config';
+
+export default defineConfig([
+    globalIgnores([
+        '_compiled/**',
+        '_coverage/**',
+        '_dist/**',
+        'docs/doc/**',
+        'docs/releases/**/doc/**',
+        '**/*.js',
+        '**/*.cjs',
+        '**/*.mjs',
+        '**/*.jsx'
+    ]),
     {
+        files: [
+            '**/*.ts',
+            '**/*.d.ts',
+            '**/*.mts',
+            '**/*.d.mts',
+            '**/*.cts',
+            '**/*.d.cts',
+            '**/*.tsx'
+        ],
+        plugins: {
+            'es-x': esX,
+            '@stylistic': stylistic
+        },
+        extends: [
+            eslint.configs.recommended,
+            'es-x/flat/restrict-to-es2022',
+            '@stylistic/recommended',
+            ...tsEslint.configs.recommendedTypeChecked,
+            ...tsEslint.configs.strictTypeChecked,
+            ...tsEslint.configs.stylisticTypeChecked
+        ],
         languageOptions: {
-            ecmaVersion: 2023,
+            ecmaVersion: 2022,
             sourceType: 'module',
             parserOptions: {
                 projectService: true
+            },
+            globals: {
+                ...globals.browser
             }
         },
         rules: {
             /* @eslint/js */
+
             'array-callback-return': ['error', {
                 checkForEach: true
             }],
@@ -90,6 +116,8 @@ export default tsEslint.config(
             'no-useless-assignment': 'error',
 
             'require-atomic-updates': 'error',
+
+            'require-await': 'error',
 
             'use-isnan': ['error', {
                 enforceForSwitchCase: true,
@@ -152,7 +180,7 @@ export default tsEslint.config(
 
             '@stylistic/semi': ['error', 'always'],
 
-            /* @typescript-eslint */
+            /* typescript-eslint */
 
             'dot-notation': 'off',
             '@typescript-eslint/dot-notation': 'error',
@@ -205,10 +233,7 @@ export default tsEslint.config(
             '@typescript-eslint/restrict-template-expressions': ['error', {
                 allowNumber: true,
                 allowBoolean: true
-            }],
-
-            /* eslint-plugin-n */
-            'n/no-missing-import': 'off'
+            }]
         }
     }
-);
+]);

@@ -1,6 +1,6 @@
 *.DS_Store
 
-# WebStorm and JetBrains IDEs
+# JetBrains IDEs
 .idea/
 
 # Visual Studio Code
@@ -11,17 +11,11 @@
 .sass-cache/
 _site/
 
-# Node.js
+# Node.js and npm
 node_modules/
 
-# TypeScript
+# compiling, bundling, testing, and coverage output
 _compiled/
-
-# typedoc
-_doc/
-
-# tsup
-_dist/
-
-# Vitest coverage
 _coverage/
+_dist/
+_doc/
